@@ -118,7 +118,7 @@ void Warehouse::delete_product(char crit[50]){
 
     if (pos != -1){
         if (pos == this->size - 1){
-            this->list[pos] = this->list[pos - 1];
+            this->total_stock = this->total_stock + this->list[pos].quantity;
         }
 
         for (int i=pos; i< this->get_size() - 1; i++){
