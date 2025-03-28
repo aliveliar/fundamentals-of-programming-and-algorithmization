@@ -123,10 +123,10 @@ void Warehouse::delete_product(char crit[50]){
 
         for (int i=pos; i< this->get_size() - 1; i++){
             this->list[i] = this->list[i+1];
-            this->size--;
-            this->set_size(this->size);
-            cout << "Product deleted" <<endl;
         }
+        this->size--;
+        this->set_size(this->size);
+        cout << "Product deleted" <<endl;
     }else{
         cout<<"Product not found" << endl;
     }
